@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        class fundamental
+    </title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+</body>
+<script>
+    class Square
+    {
+        constructor(width)
+        {
+            this.width = width;
+            this.height = width
+        }
+
+        get area()
+        {
+            return this.width * this.height;
+        }
+
+        set area(area)
+        {
+             this.width = Math.sqrt(area);
+             this.height = this.width;
+        }
+    }
+
+    let Square1 = new Square(10);
+    console.log(Square1);
+    //console.log(Square1.area);
+    Square1.area = 25;
+    console.log(Square1.width +"" + " "+ Square1.height);
+    
+</script>
+</html>

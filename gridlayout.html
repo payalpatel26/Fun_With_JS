@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        gridlayout
+    </title>
+    <style>
+
+
+       .iteams1
+        {
+           grid-area: myarea1;
+        }
+
+
+        .grid-container
+        {
+
+            display: grid;
+            background-color: darkkhaki;
+            grid-template-areas: 'myarea1 myarea1 . .''myarea1 myarea1 . .';
+            /*grid-template-columns: auto auto auto auto;*/
+            
+            
+
+        }
+
+        .grid-iteams
+        {
+            background-color: gainsboro;
+            border:1px solid black;
+            padding: 10px;
+            margin:10px;
+        }
+
+
+
+        
+
+        
+
+
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="grid-iteams iteams1">1</div>
+        <div class="grid-iteams iteams2">2</div>
+        <div class="grid-iteams  iteams3">3</div>
+        <div class="grid-iteams iteams4">4</div>
+        <div class="grid-iteams">5</div>
+        <div class="grid-iteams">6</div>
+        <div class="grid-iteams">7</div>
+        <div class="grid-iteams">8</div>
+        <div class="grid-iteams">9</div>
+        <div class="grid-iteams">10</div>
+        <div class="grid-iteams">11</div>
+        <div class="grid-iteams">12</div>
+        <div class="grid-iteams">13</div>
+
+
+        
+    </div>
+
+</body>
+</html>

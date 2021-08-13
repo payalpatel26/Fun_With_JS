@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        ArraySorting
+    </title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="Answer"></p>
+    <button id="btnsort" onclick="sortingNumber();"> Asecnding Number</button>
+
+    <button id="btnmax" onclick="findmaxvalue();">Find Max Number</button>
+    <button id="btnMin"   onclick="findMinValue();">Find MinValue</button>
+    <button id="btntotal"  onclick="elementSum();">Total</button>
+    <button id="btndouble" onclick="makeDoubleElement();"> Make Double Element Array</button>
+    <button id="btnOdd" onclick="oddElemnent();">CreateOddArray</button>
+    <script>
+        const numarray = [40,100,80,340,5,25];
+        document.getElementById('demo').innerHTML = numarray;
+
+        function sortingNumber()
+        {
+            document.getElementById('Answer').innerHTML = numarray.sort(function(a, b){return a-b;});
+        }
+
+        function findmaxvalue()
+        {   // numarray.sort(function(a, b){return a-b;})
+            //document.getElementById('Answer').innerHTML = numarray[numarray.length-1];
+            var len = numarray.length;
+             var maxvalue = -Infinity;
+            while(len--)
+            {
+                alert(maxvalue);
+                if(numarray[len] > maxvalue)
+                {
+                    maxvalue = numarray[len]
+                }
+
+            }
+            document.getElementById('Answer').innerHTML = maxvalue;
+        }
+
+        function findMinValue()
+        {
+            //numarray.sort(function(a, b){return a-b;})
+            //document.getElementById('Answer').innerHTML = numarray[0];
+
+            var len = numarray.length;
+             var minvalue = Infinity;
+            while(len--)
+            {
+                alert(minvalue);
+                if(numarray[len] < minvalue)
+                {
+
+                    minvalue = numarray[len]
+                }
+
+            }
+            document.getElementById('Answer').innerHTML = minvalue;
+        }
+
+        function elementSum()
+        {
+            var total = 0;
+             // using foreach function. 
+            numarray.forEach(myfunction);
+            function myfunction(value)
+            {
+                total += value;
+            }
+
+            document.getElementById('Answer').innerHTML = total;
+        }
+
+        function makeDoubleElement()
+        {
+            // using map function where we can use every element of array and create new array.
+            const doublearray = numarray.map(makedouble);
+            function makedouble(value)
+            {
+               return 2*value;
+            }
+
+            document.getElementById('Answer').innerHTML = doublearray;
+
+        }
+
+        function oddElemnent()
+        {
+         
+            const oddarray = numarray.filter(createodd);
+            function createodd(value)
+            {
+                alert(value % 2)
+                if( value % 2 == 0)
+                {
+                    return value;
+                }
+            }
+
+            document.getElementById('Answer').innerHTML =  oddarray;
+        }
+        
+    </script>
+</body>
+</html>

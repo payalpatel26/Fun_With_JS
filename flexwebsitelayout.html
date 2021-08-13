@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        flexwebsitelayout
+    </title>
+    <style>
+        .flex-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .header
+        {
+            background-color: lightblue;
+            border: 1px solid black;
+            font-family: 'Times New Roman', Times, serif;
+            flex:100%;
+        }
+        .nav
+        {
+        
+            background-color: lightcyan;
+            width: 100%;
+
+        }
+        .nava
+        {
+            text-decoration: none;
+            background-color: white;
+            padding: 4px;
+            margin: 4px;
+            display: inline-block;
+            border: 1px dashed black;
+            color:black;
+
+        }
+        .maincontain
+        
+        {
+           background-color: lightgray;
+           flex:100%;
+           display: flex;
+           flex-direction: row;
+           
+        }
+
+        .mainleft
+        {
+            flex:30%;
+            margin:5px;
+            padding:5px;
+        }
+
+
+
+        .profilemenu button
+        {
+            width:fit-content;
+            height:fit-content;
+            padding:5px;
+            margin:5px;
+            border: 1px solid black;
+            display: block;
+            border-radius: 5px;
+        }
+        .mainright
+        {
+           margin:5px;
+           padding: 5px;
+            flex: 70%;
+    
+        }
+
+        .mainright p{
+            text-align: justify;
+            color: blue;
+        }
+
+       .footer
+       {
+           text-align: center;
+           background-color: lightblue;
+       }
+       #dvrightparacontent
+       {
+           columns: 3;
+           column-gap: 20px;
+           padding:5px;
+           margin:5px;
+       }
+
+       @media screen and (max-width: 700px) {
+        .maincontain{
+            flex-direction: column;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="header">
+            <h1 style="text-align: center; color:black">header</h1>
+            <div class="nav">
+                <a herf="#" class="nava" >link1</a>
+                <a href="#" class="nava">link2</a>
+                <a href="#" class="nava">link3</a>
+                <a href="#" class="nava">link4</a>
+
+            </div>
+        </div>
+
+        <div class="maincontain">
+            <div class="mainleft">
+                <h2 style="text-align: left; border-bottom: black;"> My profile</h2>
+                <div style="width:450px; height:300px; border:1px solid black;">hello</div>
+                <div class="profilemenu">
+                <button id="btnviewprofile" >view my photo</button>
+                <button id="btnsetprofile">set my photo</button>
+                <button id="btnsetname"> write my name</button>
+                </div>
+            </div>
+            <div class="mainright">
+
+                <div style="width:450px; height:200px; border: 1px solid black;">kept picture</div>
+                <div id="dvrightparacontent">
+                <p>hello this new weblayout where you can create your website.please try to this weblayout and make yoyr website look
+                    hello this new weblayout where you can create your website.please try to this weblayout and make yoyr website look
+                    hello this new weblayout where you can create your website.please try to this weblayout and make yoyr website look
+                    hello this new weblayout where you can create your website.please try to this weblayout and make yoyr website look
+                    hello this new weblayout where you can create your website.please try to this weblayout and make yoyr website look
+                    hello this new weblayout where you can create your website.please try to this weblayout and make yoyr website look
+                    hello this new weblayout where you can create your website.please try to this weblayout and make yoyr website look
+
+                </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <p> footer</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Calender App
+    </title>
+    <link rel="stylesheet" type="text/css" href="calender.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script type="text/javascript" src="calender.js"></script>
+</head>
+<body onload="Displaytime();displaymonthandday();">
+    <div id="dvMain" class="flex-Container">
+        <div id="dvhedaer" class ="header">
+           <h1 id="htime"></h1> 
+        </div>
+            
+            <div id="dvheadermy" class="header">
+                <button id="btnless" class="btnlegr" onclick="premonth()"> <</button>
+                <h2 id="hmonthyear" style="display: inline-block;"></h2>
+                <button id="btnGrater" class="btnlegr" onclick="nextmonth()"> <</button>
+            </div>
+        
+        <div id="dvmainContain" class="grid_template">
+        <!--DISPLAY DIV WEEKDAYS-->
+        <div> <sapn  class="dayspan"><strong>Sun</strong></sapn></div>
+        <div><span class="dayspan"><strong>Mon</strong></span></div>
+        <div> <sapn  class="dayspan"><strong>Tue</strong></sapn></div>
+        <div> <sapn class="dayspan"><strong>Wed</strong></sapn></div>
+        <div> <sapn class="dayspan"><strong>Thu</strong></sapn></div>
+        <div> <sapn class="dayspan"><strong>Fri</strong></sapn></div>
+        <div> <sapn class="dayspan"><strong>Sat</strong></sapn></div>
+        <!--DISPLAY DATE IN GRID-->
+        <div> <button id="btn0"class="daybutton">  </button></div>
+        <div> <button id="btn1"class="daybutton">  </button></div>
+        <div> <button id="btn2"class="daybutton">  </button></div>
+        <div> <button id="btn3"class="daybutton">  </button></div>
+        <div> <button id="btn4"class="daybutton">  </button></div>
+        <div> <button id="btn5"class="daybutton">  </button></div>
+        <div> <button id="btn6"class="daybutton">  </button></div>
+        <div> <button id="btn7"class="daybutton">  </button></div>
+        <div> <button id="btn8"class="daybutton">  </button></div>
+        <div> <button id="btn9"class="daybutton">  </button></div>
+        <div> <button id="btn10"class="daybutton">  </button></div>
+        <div> <button id="btn11"class="daybutton">  </button></div>
+        <div> <button id="btn12"class="daybutton">  </button></div>
+        <div> <button id="btn13"class="daybutton">  </button></div>
+        <div> <button id="btn14"class="daybutton">  </button></div>
+        <div> <button id="btn15"class="daybutton">  </button></div>
+        <div> <button id="btn16"class="daybutton"> </button></div>
+        <div> <button id="btn17"class="daybutton">  </button></div>
+        <div> <button id="btn18"class="daybutton">  </button></div>
+        <div> <button id="btn19"class="daybutton">  </button></div>
+        <div> <button id="btn20"class="daybutton"> </button></div>
+        <div> <button id="btn21"class="daybutton"></button></div>
+        <div> <button id="btn22"class="daybutton"> </button></div>
+        <div> <button id="btn23"class="daybutton"> </button></div>
+        <div> <button id="btn24"class="daybutton"> </button></div>
+        <div> <button id="btn25"class="daybutton"> </button></div>
+        <div> <button id="btn26"class="daybutton"> </button></div>
+        <div> <button id="btn27"class="daybutton"> </button></div>
+        <div> <button id="btn28"class="daybutton"> </button></div>
+        <div> <button id="btn29"class="daybutton"> </button></div>
+        <div> <button id="btn30"class="daybutton"> </button></div>
+        <div> <button id="btn31"class="daybutton"> </button></div>
+        <div> <button id="btn32"class="daybutton"> </button></div>
+        <div> <button id="btn33"class="daybutton"> </button></div>
+        <div> <button id="btn34"class="daybutton"> </button></div>        
+        <div> <button id="btn35"class="daybutton"> </button></div>
+        <div> <button id="btn36"class="daybutton"> </button></div>
+        </div>
+        <div id="dvfooter">
+            <button id="btntoday" class="todaybtn" onclick="displaymonthandday()"></button>
+        </div>
+
+    </div>
+</body>
+</html>

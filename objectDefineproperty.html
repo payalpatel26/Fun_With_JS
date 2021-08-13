@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        objectDefineProperty
+    </title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+       //"use strict
+        const obj = {};
+        var descripter = Object.create(null);
+        descripter.value = "static";
+        descripter.writable = true;
+        descripter.enumerable = true;
+
+        Object.defineProperty(obj,"ex1",descripter);
+        //obj.ex1 = "hello";
+        Object.defineProperty(obj,"ck2",{
+            value:"chking1",
+            enumerable : true,
+            writable:true
+        })
+
+        //obj.ck2 = "how r u";
+        console.log(obj);
+
+        let text = "";
+        for(let x in obj){
+            text += obj[x];
+        }
+     document.getElementById("demo").innerHTML = text;
+
+        //using get and set with objectdefine property.
+       debugger;
+        const obj1 = {};
+        Object.defineProperty(obj1,"count",{
+            value:0,
+            writable:true,
+            enumerable:true,
+        })
+        obj1.count =0;
+        Object.defineProperty(obj1,"reset", {
+            get : function(){this.count = 0;}
+        });
+        Object.defineProperty(obj1,"increment" ,{
+            get : function() {this.count++;}
+        });
+        Object.defineProperty(obj1,"decrement" ,{
+            get : function(){this.count--;}
+        });
+        Object.defineProperty(obj1,"Add", {
+            set : function(val){this.count += val}
+        });
+
+        Object.defineProperty(obj1,"Sub" ,{
+            set:  function(val){this.count -= val}
+        });
+
+        console.log(obj1.reset);
+        console.log(obj1.Add =5);
+        console.log(obj1.Sub = 2);
+        console.log(obj1.increment);
+        console.log(obj1.decrement);
+        console.log(obj1.count);
+        console.log(obj);
+
+    </script>
+</body>
+</html>

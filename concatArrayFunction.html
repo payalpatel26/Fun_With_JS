@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        ConcatearrayFunction
+    </title>
+
+
+</head>
+<body>
+<p id ="list1"></p>
+<p id="list2"></p>
+<p id ="merge"></p>
+<button id="btnMerge" onclick="mergeProduct();">Merge Two List</button>
+
+
+<br><br>
+<input type="text" id="txtaddcars">
+<button id="btnAddCars"  onclick="Additeams();">Add cars</button>
+<br><br>
+<input type="text" id="txtremove">
+<p id="select"></p>
+<button id="btnremovecar" onclick="removescars();">select cars</button>
+
+<script>
+
+    var cars= ["mazada" , "haval" , "fiat","tyota"];
+    var string1 ="list1";
+    var model= ["cx-5" ,"h5", "fi3","tida-1"]
+    var strin2 ="list2";
+    cars.sort();
+    model.sort();
+    List1(cars,string1);
+    List1(model,strin2)
+    function List1( array ,string)
+    {
+       // display first list
+        var text = "<u>"
+
+        for(var i=0; i < array.length; i++)
+        {
+            text +=  "<li>" + array[i] + "</li>"
+        }
+
+        text += "</u>"
+
+        document.getElementById(string).innerHTML = text;
+    }
+
+    function mergeProduct()
+    {  
+        const mergePro = cars.concat(model);
+        mergePro.sort();
+        var string3 = "merge";
+        List1(mergePro,string3);
+    }
+
+    function Additeams()
+    {
+        var valcars = document.getElementById('txtaddcars').value;
+         cars = cars.concat(valcars);
+         cars.sort();
+        var strcars ="list1"
+        List1(cars , strcars);
+    }
+
+    function sliceiteams (array2,carname)
+    {
+    
+    
+    
+        for(var i=0; i < array2.length; i++)
+        {
+            if(array2[i]==carname)
+            {
+
+            alert("hello in selected section")
+             const   nsliceiteams = array2.slice(i);
+             alert(nsliceiteams)
+             document.getElementById('select').innerHTML = nsliceiteams;
+             
+            }
+            
+        }
+
+        
+
+
+    }
+
+
+    function removescars()
+    {
+        
+        var carname = document.getElementById('txtremove').value;
+        alert(carname);
+        sliceiteams(cars,carname);
+
+
+    }
+
+
+
+</script>
+
+</body>
+</html>

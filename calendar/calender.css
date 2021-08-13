@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-Container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  text-align: center;
+  background-color: lightskyblue;
+  color: black;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+}
+
+.grid_template {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  padding: 10px;
+}
+
+#dvmainContain {
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  color: black;
+  width: 100%;
+}
+
+.daybutton {
+  width: 66px;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+  padding: 10px;
+}
+.btnlegr {
+  border: none;
+  padding: 20px;
+  display: inline-block;
+  background-color: lightskyblue;
+  color: black;
+}
+.dayspan {
+  width: 66px;
+  background-color: whitesmoke;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+
+.todaybtn {
+  color: black;
+  border: none;
+  text-decoration: underline;
+  background-color: lightskyblue;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+#dvfooter {
+  background-color: lightskyblue;
+  width: 100%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 1200px) {
+  #dvmainContain {
+    overflow: scroll;
+  }
+
+  body {
+    background-color: black;
+  }
+}
